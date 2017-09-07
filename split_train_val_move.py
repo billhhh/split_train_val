@@ -7,7 +7,7 @@ from random import shuffle
 list_path = './'
 train_list = 'train.txt'
 val_list = 'val.txt'
-val_ratio = 0.8
+# val_ratio = 0.8
 
 src_dir = 'images'
 
