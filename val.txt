@@ -1,2 +1,9 @@
 images/apple/apple_87.jpg 0
-images/apple/apple_82.jpg 0
+images/apple/apple_85.jpg 0
+images/apple/apple_83.jpg 0
+images/banana/219035782966244844_2179956.jpg 1
+images/banana/174551453_902705.jpg 1
+images/banana/228499403873075775_73983.jpg 1
+images/cherries/29862263_2110335.jpg 2
+images/cherries/225678526755219131_14277920.jpg 2
+images/cherries/211113881158746948_3711983.jpg 2
