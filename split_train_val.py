@@ -40,11 +40,11 @@ for ind in range(0,len(lst)):
             continue
         else:
             cnt+=1
-            #if cnt <= 150:
-            if cnt <= floor(len(sblst) * val_ratio) and cnt <= 500:
-                f_train.writelines(filepath_src + " " + str(ind) + '\n')
-            else:
+            # 固定测试集50张图片
+            if cnt <= 50:
                 f_val.writelines(filepath_src + " " + str(ind) + '\n')
+            else:
+                f_train.writelines(filepath_src + " " + str(ind) + '\n')
 
 f_train.close()
 f_val.close()
