@@ -3,6 +3,7 @@ import os.path
 from shutil import copyfile
 from math import floor
 from random import shuffle
+import shutil
 
 list_path = './'
 train_list = 'train.txt'
@@ -10,6 +11,8 @@ val_list = 'val.txt'
 # val_ratio = 0.8
 
 src_dir = 'images'
+des_dir = 'test'
+os.mkdir(des_dir)
 
 class_names = []
 for filename in os.listdir(src_dir):
@@ -30,6 +33,7 @@ f_train = open(os.path.join(list_path, train_list), 'w')
 f_val = open(os.path.join(list_path, val_list), 'w')
 
 for ind in range(0,len(lst)):
+    os.mkdir(des_dir + '/' + lst[ind])
     sblst=os.listdir(os.path.join(src_dir,lst[ind]))
     shuffle(sblst)
     print(len(sblst))
@@ -40,9 +44,11 @@ for ind in range(0,len(lst)):
             continue
         else:
             cnt+=1
-            # 固定测试集50张图片
-            if cnt <= 50:
+            # fix test set(50 images)
+            if cnt <= 3:
                 f_val.writelines(filepath_src + " " + str(ind) + '\n')
+                # move files
+                shutil.move(filepath_src, des_dir+ '/' + lst[ind] + '/' + pic_name)
             else:
                 f_train.writelines(filepath_src + " " + str(ind) + '\n')
 
