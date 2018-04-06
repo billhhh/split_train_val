@@ -10,8 +10,8 @@ train_list = 'train.txt'
 val_list = 'val.txt'
 # val_ratio = 0.8
 
-src_dir = 'images'
-des_dir = 'test'
+src_dir = 'train_val'
+des_dir = 'val'
 os.mkdir(des_dir)
 
 class_names = []
@@ -44,8 +44,8 @@ for ind in range(0,len(lst)):
             continue
         else:
             cnt+=1
-            # fix test set(50 images)
-            if cnt <= 3:
+            # fix val set(10 images)
+            if cnt <= 10:
                 f_val.writelines(filepath_src + " " + str(ind) + '\n')
                 # move files
                 shutil.move(filepath_src, des_dir+ '/' + lst[ind] + '/' + pic_name)
