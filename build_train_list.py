@@ -5,9 +5,9 @@ from math import floor
 from random import shuffle
 
 list_path = './'
-train_list = 'newFood724_train_percent10_aug.txt'
+train_list = 'train.txt'
 
-src_dir = 'images'
+src_dir = 'train'
 
 class_names = []
 for filename in os.listdir(src_dir):
