@@ -39,6 +39,6 @@ for ind in range(0,len(lst)):
             continue
         else:
             label_id = all_food_lst.index(lst[ind]);
-            f_evaluation.writelines(filepath_src + " " + label_id + '\n')
+            f_evaluation.writelines(filepath_src + " " + str(label_id) + '\n')
 
 f_evaluation.close()
